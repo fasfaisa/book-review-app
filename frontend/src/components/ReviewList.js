@@ -121,8 +121,9 @@ function ReviewList() {
     {message.text}
   </div>
 )}
-
-      <table className="reviews-table">
+<div className="reviews-table-wrapper">
+<table className="reviews-table">
+      
         <thead>
           <tr>
             <th>Title</th>
@@ -166,7 +167,7 @@ function ReviewList() {
           )))}
         </tbody>
       </table>
-
+      </div>
 <div className="charts-container">
   {stats && (
     <>

@@ -134,7 +134,27 @@
   }
   .charts-container {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+.stats-summary {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+  .charts-container {
+    flex-direction: row;
     justify-content: space-around;
   }
   
+  .filter-group {
+    flex: 0 1 auto;
+  }
+}
