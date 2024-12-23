@@ -122,32 +122,41 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json({ message: 'Error deleting review', error: error.message });
   }
 });
-
-// GET route for statistics
+// Add this below the existing routes
 router.get('/stats/summary', async (req, res) => {
   try {
     const stats = await Review.aggregate([
       {
         $group: {
+          _id: '$rating',
+          count: { $sum: 1 }
+        }
+      },
+      {
+        $sort: { _id: 1 } // Sort ratings (1-5)
+      }
+    ]);
+
+    const totalStats = await Review.aggregate([
+      {
+        $group: {
           _id: null,
           averageRating: { $avg: '$rating' },
-          totalReviews: { $sum: 1 },
-          ratingDistribution: {
-            $push: '$rating'
-          }
+          totalReviews: { $sum: 1 }
         }
       }
     ]);
 
-    if (stats.length === 0) {
-      return res.json({
-        averageRating: 0,
-        totalReviews: 0,
-        ratingDistribution: []
-      });
-    }
+    const ratingDistribution = Array(5).fill(0);
+    stats.forEach(stat => {
+      ratingDistribution[stat._id - 1] = stat.count;
+    });
 
-    res.json(stats[0]);
+    res.json({
+      averageRating: totalStats[0]?.averageRating || 0,
+      totalReviews: totalStats[0]?.totalReviews || 0,
+      ratingDistribution
+    });
   } catch (error) {
     res.status(500).json({ message: 'Error fetching statistics', error: error.message });
   }
