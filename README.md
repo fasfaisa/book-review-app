@@ -96,3 +96,11 @@ cd book-review-app
 3. Use the dropdown to filter reviews by rating.
 4. View statistical summaries in pie and bar charts.
 
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+  <img alt="Screenshot 1" width="200" src="Screenshot (366).png">
+  <img alt="Screenshot 2" width="200" src="Screenshot (367).png">
+  <img alt="Screenshot 3" width="200" src="Screenshot (368).png">
+  <img alt="Screenshot 4" width="200" src="Screenshot (369).png">
+  <img alt="Screenshot 5" width="200" src="Screenshot (370).png">
+</div>
