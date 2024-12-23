@@ -1,6 +1,3 @@
-Below is a sample `README.md` file for your Book Review Web Application, covering both backend and frontend setup, features, and usage.
-
----
 
 # Book Review Web Application
 
