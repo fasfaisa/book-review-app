@@ -1,0 +1,109 @@
+/* Container for the form */
+.form-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #767676;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Title Styling */
+  .form-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* General form input styling */
+  .form-input, .form-textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Specific textarea styling */
+  .form-textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  /* Focus effect for input and textarea */
+  .form-input:focus, .form-textarea:focus {
+    border-color: #4f46e5;
+    outline: none;
+  }
+  
+
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Button hover effect */
+  .form-button:hover {
+    background-color: #3730a3;
+  }
+  
+  /* Button active effect */
+  .form-button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Animation for the form */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 20px;
+    }
+  
+    .form-title {
+      font-size: 1.8rem;
+    }
+  }
+  .form-button {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .form-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .form-button.cancel {
+    background-color: #f44336;
+  }
+  
+  .form-button:hover {
+    opacity: 0.9;
+  }
+  
+  .error {
+    color: #f44336;
+    text-align: center;
+    padding: 1rem;
+  }

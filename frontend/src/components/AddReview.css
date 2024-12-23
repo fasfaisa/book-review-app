@@ -1,0 +1,90 @@
+/* Styling the container of the form */
+.form-container {
+    max-width: 550px;
+    margin: 50px auto;
+    padding:30px;
+    background-color: #4d4949;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in;
+  }
+  
+  /* Title styling */
+  .form-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form input fields */
+  .form-input, .form-textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  /* Styling for textarea */
+  .form-textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  /* Focus effect for input fields */
+  .form-input:focus, .form-textarea:focus {
+    border-color: #4f46e5;
+    outline: none;
+  }
+  
+  /* Button styling */
+  .form-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-button:hover {
+    background-color: #3730a3;
+  }
+  
+  /* Form hover effect */
+  .form-button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Animation for form */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 20px;
+    }
+  
+    .form-title {
+      font-size: 1.8rem;
+    }
+  }
+  
