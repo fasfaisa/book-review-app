@@ -8,20 +8,6 @@ This is a full-stack web application that allows users to browse, add, edit, and
 
 ---
 
-## Table of Contents
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Backend](#backend)
-  - [Routes](#routes)
-- [Frontend](#frontend)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
-- [License](#license)
-
----
-
 ## Features
 - CRUD operations for book reviews.
 - Filter reviews by rating.
@@ -39,15 +25,7 @@ This is a full-stack web application that allows users to browse, add, edit, and
 
 ---
 
-## Prerequisites
-Ensure you have the following installed on your system:
-- [Node.js](https://nodejs.org/) (v14 or later)
-- [MongoDB](https://www.mongodb.com/)
-- [npm](https://www.npmjs.com/)
 
----
-
-## Installation
 
 ### Clone the Repository
 ```bash
@@ -66,7 +44,6 @@ cd book-review-app
    ```
 3. Create a `.env` file with the following variables:
    ```env
-   PORT=5000
    MONGO_URI=mongodb://localhost:27017/bookreviews
    ```
 4. Start the backend server:
