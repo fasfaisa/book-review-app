@@ -26,7 +26,7 @@ This is a full-stack web application that allows users to browse, add, edit, and
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-repo/book-review-app.git
+https://github.com/fasfaisa/book-review-app.git
 cd book-review-app
 ```
 
