@@ -1,11 +1,32 @@
 const mongoose = require('mongoose');
 
-const reviewSchema = mongoose.Schema({
-  title: { type: String, required: true },
-  author: { type: String, required: true },
-  rating: { type: Number, required: true, min: 1, max: 5 },
-  reviewText: { type: String, required: true },
-  dateAdded: { type: Date, default: Date.now },
+const reviewSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  author: {
+    type: String,
+    required: true
+  },
+  rating: {
+    type: Number,
+    required: true,
+    min: 1,
+    max: 5
+  },
+  reviewText: {
+    type: String,
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  updatedAt: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 module.exports = mongoose.model('Review', reviewSchema);
